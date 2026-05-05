@@ -14,7 +14,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # РАБОТЕЩ ЛИНК (Можеш да го замениш с твоя Raw линк от GitHub по-късно)
-YOUR_IMAGE_URL = "https://thumbs.dreamstime.com/b/smiley-face-thumbs-up-14491322.jpg"
+YOUR_IMAGE_URL = "https://img.freepik.com/free-vector/smiley-face-thumbs-up_1308-45605.jpg"
 
 funny_app_html = f"""
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -118,7 +118,7 @@ funny_app_html = f"""
                     ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
                 </h2>
                 
-                <img src="{https://thumbs.dreamstime.com/b/smiley-face-thumbs-up-14491322.jpg}" style="
+                <img src="{YOUR_IMAGE_URL}" style="
                     margin-top: 25px;
                     width: 350px; 
                     height: auto;
