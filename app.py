@@ -1,80 +1,78 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-# Настройка за по-изчистен вид
-st.set_page_config(page_title="Vibe Coding Project", layout="centered")
+# Настройка за пълно сливане с браузъра
+st.set_page_config(page_title="Vibe Coding Joke", layout="centered")
 
-# Скриваме стандартните полета на Streamlit (padding), за да се слива по-добре
+# CSS за премахване на всички граници от Streamlit
 st.markdown("""
     <style>
-        .block-container { padding-top: 2rem; padding-bottom: 0rem; }
+        .block-container { padding: 0; }
         footer {visibility: hidden;}
+        header {visibility: hidden;}
+        body { background-color: white; }
     </style>
     """, unsafe_allow_html=True)
 
-# ТВОЯТА СНИМКА: Постави линка към твоята снимка тук
-# Може да е линк от интернет или файл, качен в GitHub (ползвай "Raw" линка)
+# ТВОЯТА СНИМКА (замени линка вътре в кавичките)
 YOUR_IMAGE_URL = "https://images.unsplash.com/photo-1531256456869-ce942a665e80?q=80&w=500&auto=format&fit=crop"
 
 funny_app_html = f"""
-<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: transparent;">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 90vh; background-color: white; font-family: sans-serif;">
 
-    <!-- ВЪПРОСЪТ: ПРАВОЪГЪЛНИК СЪС ЗАОБЛЕНИ ЪГЛИ -->
+    <!-- ВЪПРОСЪТ: ЗАОБЛЕН ПРАВОЪГЪЛНИК -->
     <div style="
         border: 4px solid black; 
-        border-radius: 20px; 
-        padding: 25px 40px; 
+        border-radius: 15px; 
+        padding: 20px 40px; 
         background-color: white; 
-        margin-bottom: 30px;
-        text-align: center;
-        width: 80%;
-        max-width: 500px;">
-        <h1 style="margin: 0; font-size: 26px; color: black; font-weight: 800;">Ще ми дадеш ли отличен (6) на проекта?</h1>
+        margin-bottom: 20px;
+        text-align: center;">
+        <h2 style="margin: 0; color: black; font-weight: bold;">Ще ми дадеш ли отличен (6) на проекта?</h2>
     </div>
 
     <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
     <div id="mainContainer" style="
-        width: 95%; 
-        max-width: 650px; 
-        height: 450px; 
+        width: 90%; 
+        max-width: 600px; 
+        height: 400px; 
         background-color: white; 
         border: 4px solid black; 
-        border-radius: 30px; 
+        border-radius: 20px; 
         position: relative; 
-        overflow: hidden;
-        box-shadow: 10px 10px 0px rgba(0,0,0,0.05);">
+        overflow: hidden;">
         
         <button id="yesBtn" style="
             position: absolute; 
-            top: 180px; 
+            top: 150px; 
             left: 15%; 
-            width: 130px;
-            padding: 15px 0; 
-            font-size: 22px; 
+            padding: 15px 35px; 
+            font-size: 20px; 
             font-weight: bold;
             background-color: #2ecc71; 
             color: white; 
-            border: 4px solid black; 
-            border-radius: 15px; 
+            border: 3px solid black; 
+            border-radius: 12px; 
             cursor: pointer;
-            z-index: 10;
-            transition: transform 0.1s;">
+            z-index: 10;">
             Да
         </button>
 
+        <!-- БУТОН "НЕ" С ПЛАВНО ДВИЖЕНИЕ (TRANSITION) -->
         <button id="noBtn" style="
             position: absolute; 
-            top: 180px; 
+            top: 150px; 
             right: 15%; 
-            width: 130px;
-            padding: 15px 0; 
-            font-size: 22px; 
+            padding: 15px 35px; 
+            font-size: 20px; 
             font-weight: bold;
             background-color: #e74c3c; 
             color: white; 
-            border: 4px solid black; 
-            border-radius: 15px; 
+            border: 3px solid black; 
+            border-radius: 12px; 
             z-index: 10;
+            cursor: pointer;
+            transition: all 0.4s ease-out; /* ТОВА ПРАВИ ПЛЪЗГАНЕТО ПО ТВОЯТА ГРАФИКА */
             touch-action: none;">
             Не
         </button>
@@ -86,12 +84,13 @@ funny_app_html = f"""
     const container = document.getElementById('mainContainer');
     const yesBtn = document.getElementById('yesBtn');
 
-    function teleport() {{
+    function glideButton() {{
         const containerWidth = container.clientWidth;
         const containerHeight = container.clientHeight;
         const btnWidth = noBtn.clientWidth;
         const btnHeight = noBtn.clientHeight;
 
+        // Генерираме нови координати
         const newX = Math.random() * (containerWidth - btnWidth);
         const newY = Math.random() * (containerHeight - btnHeight);
 
@@ -100,8 +99,14 @@ funny_app_html = f"""
         noBtn.style.right = 'auto';
     }}
 
-    noBtn.addEventListener('mouseover', teleport);
-    noBtn.addEventListener('touchstart', (e) => {{ e.preventDefault(); teleport(); }});
+    // Задействане при доближаване (mouseover)
+    noBtn.addEventListener('mouseover', glideButton);
+    
+    // Задействане при докосване на телефон
+    noBtn.addEventListener('touchstart', (e) => {{
+        e.preventDefault();
+        glideButton();
+    }});
 
     yesBtn.addEventListener('click', () => {{
         document.body.innerHTML = `
@@ -112,22 +117,18 @@ funny_app_html = f"""
                 justify-content: center; 
                 height: 100vh; 
                 background-color: #2ecc71; 
-                font-family: sans-serif;
                 color: white;
-                text-align: center;
-                padding: 20px;">
+                font-family: sans-serif;">
                 
-                <h1 style="font-size: 50px; text-shadow: 4px 4px 0px black; margin: 0;">БРАВО!</h1>
-                <h2 style="font-size: 24px; color: black; background: white; padding: 15px 30px; border: 4px solid black; border-radius: 15px; margin: 20px 0;">
+                <h1 style="font-size: 50px; text-shadow: 3px 3px 0px black;">БРАВО!</h1>
+                <h2 style="background: white; color: black; padding: 10px 20px; border: 4px solid black; border-radius: 10px; margin: 20px 0;">
                     ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
                 </h2>
                 
-                <!-- ТВОЯТА СНИМКА СЪС ЗАОБЛЕНИ ЪГЛИ -->
                 <img src="{YOUR_IMAGE_URL}" style="
                     width: 300px; 
-                    height: auto; 
-                    border-radius: 30px; 
-                    border: 5px solid black; 
+                    border-radius: 25px; 
+                    border: 4px solid black;
                     box-shadow: 10px 10px 0px rgba(0,0,0,0.2);">
             </div>
         `;
@@ -135,5 +136,4 @@ funny_app_html = f"""
 </script>
 """
 
-# Рендиране
-components.html(funny_app_html, height=850)
+components.html(funny_app_html, height=800)
