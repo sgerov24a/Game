@@ -33,7 +33,7 @@ funny_app_html = f"""
 
         <!-- ВЪПРОСЪТ -->
         <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: #FFC2D4; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.25);">
-            <h2 style="margin: 0; font-family: 'Arial', cursive; color: black; font-weight: 400; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
+            <h2 style="margin: 0; font-family: 'Comic Sans MS', cursive; color: black; font-weight: 400; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
         </div>
 
         <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
