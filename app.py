@@ -16,7 +16,7 @@ st.markdown("""
 YOUR_IMAGE_URL = "https://github.com/sgerov24a/Game/blob/main/Screenshot%202026-05-05%20230606.png?raw=true"
 
 funny_app_html = f"""
-<div style="display: flex; align-items: center; justify-content: center; height: 95vh; background-color: #eb6a90; font-family: 'Segoe UI', sans-serif;">
+<div style="display: flex; align-items: center; justify-content: center; height: 95vh; background-color: #F8BDCE; font-family: 'Segoe UI', sans-serif;">
 
     <!-- ОБЩИЯТ КОНТЕЙНЕР С ГРАНИЦА (Като на Браво екрана) -->
     <div style="
