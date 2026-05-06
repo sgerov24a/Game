@@ -8,7 +8,7 @@ st.markdown("""
         .block-container { padding: 0; }
         footer {visibility: hidden;}
         header {visibility: hidden;}
-        [data-testid="stAppViewContainer"] { background-color: white; }
+        [data-testid="stAppViewContainer"] { background-color: #ffc2d4; }
     </style>
     """, unsafe_allow_html=True)
 
