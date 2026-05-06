@@ -38,11 +38,11 @@ funny_app_html = f"""
 
         <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
         <div id="mainContainer" style="width: 100%; max-width: 650px; font-family: 'Comic Sans MS', cursive ;height: 450px; background-color: white; border: 8px solid black; border-radius: 25px; position: relative; overflow: hidden; box-shadow: 8px 8px 0px rgba(0,0,0,0.25)">
-            <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px;  font-family: 'Pacifico', cursive; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 6px solid black; border-radius: 15px; cursor: pointer; z-index: 10; box-shadow: 8px 8px 0px rgba(0,0,0,0.5)">
+            <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px;  font-family: 'Pacifico', cursive; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: black; border: 6px solid black; border-radius: 15px; cursor: pointer; z-index: 10; box-shadow: 8px 8px 0px rgba(0,0,0,0.5)">
                 Да
             </button>
 
-            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-family: 'Pacifico', cursive; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 6px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;box-shadow: 8px 8px 0px rgba(0,0,0,0.5)">
+            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-family: 'Pacifico', cursive; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: black; border: 6px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;box-shadow: 8px 8px 0px rgba(0,0,0,0.5)">
                 Не
             </button>
         </div>
