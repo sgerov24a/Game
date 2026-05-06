@@ -42,7 +42,7 @@ funny_app_html = f"""
                 Да
             </button>
 
-            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;">
+            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;box-shadow: 8px 8px 0px rgba(0,0,0,0.25)">
                 Не
             </button>
         </div>
@@ -86,7 +86,7 @@ funny_app_html = f"""
             <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #ffc2d4; font-family: sans-serif; padding: 20px;">
                 <div style="background-color: #EB6A90; border: 6px solid black; border-radius: 40px; padding: 40px; display: flex; flex-direction: column; align-items: center; box-shadow: 15px 15px 0px rgba(0,0,0,0.25); max-width: 500px; width: 90%;">
                     <h1 style="font-size: 55px; color: white; text-shadow: 4px 4px 0px black; margin: 0;">БРАВО!</h1>
-                    <h2 style="background: #ffc2d4; color: black; padding: 15px 30px; border: 4px solid black; border-radius: 20px; margin: 25px 0; font-weight: 800; font-size: 22px;">
+                    <h2 style="background: #ffc2d4; color: black; padding: 15px 30px; border: 4px solid black; border-radius: 20px; margin: 25px 0; font-weight: 800; font-size: 22px;box-shadow: 8px 8px 0px rgba(0,0,0,0.25)">
                         ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
                     </h2>
                     <img src="{YOUR_IMAGE_URL}" style="width: 100%; max-width: 320px; height: auto; border-radius: 25px; border: 5px solid black; background-color: #ffc2d4; object-fit: contain;">
