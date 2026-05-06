@@ -42,7 +42,7 @@ funny_app_html = f"""
                 Да
             </button>
 
-            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;box-shadow: 8px 8px 0px rgba(0,0,0,0.25)">
+            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;box-shadow: 8px 8px 0px rgba(0,0,0,0.5)">
                 Не
             </button>
         </div>
