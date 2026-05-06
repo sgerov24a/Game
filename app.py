@@ -26,7 +26,7 @@ funny_app_html = f"""
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        box-shadow: 15px 15px 0px rgba(0,0,0,0.25); 
+        box-shadow: 8px 8px 0px rgba(0,0,0,0.25); 
         max-width: 750px; 
         width: 95%; 
         background-color: #EB6A90;">
