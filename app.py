@@ -1,8 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-# Скриваме всичко излишно, за да се слива с браузъра
-st.set_page_config(page_title="Vibe Coding Joke", layout="centered")
+# Скриваме всичко излишно за пълно сливане с браузъра
+st.set_page_config(page_title="Vibe Coding Project", layout="centered")
 
 st.markdown("""
     <style>
@@ -13,13 +13,13 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# РАБОТЕЩ ЛИНК (Можеш да го замениш с твоя Raw линк от GitHub по-късно)
-YOUR_IMAGE_URL = "https://github.com/sgerov24a/Game/blob/main/Screenshot%202026-05-05%20230606.png?raw=true"
+# ПОСТАВИ ТВОЯ RAW ЛИНК ОТ GITHUB ТУК
+YOUR_IMAGE_URL = "https://img.freepik.com/free-vector/smiley-face-thumbs-up_1308-45605.jpg"
 
 funny_app_html = f"""
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', sans-serif;">
 
-    <!-- ВЪПРОСЪТ: ПРАВОЪГЪЛНИК СЪС ЗАОБЛЕНИ ЪГЛИ -->
+    <!-- ВЪПРОСЪТ -->
     <div style="
         border: 4px solid black; 
         border-radius: 20px; 
@@ -58,7 +58,6 @@ funny_app_html = f"""
             Да
         </button>
 
-        <!-- БУТОН "НЕ": ПЛАВНО ДВИЖЕНИЕ (EASE-OUT) -->
         <button id="noBtn" style="
             position: absolute; 
             top: 180px; 
@@ -71,7 +70,7 @@ funny_app_html = f"""
             border: 4px solid black; 
             border-radius: 15px; 
             z-index: 10;
-            transition: all 0.4s ease-out; /* ПЛЪЗГАНЕ КАТО НА ГРАФИКАТА ТИ */
+            transition: all 0.4s ease-out;
             touch-action: none;">
             Не
         </button>
@@ -88,10 +87,8 @@ funny_app_html = f"""
         const containerHeight = container.clientHeight;
         const btnWidth = noBtn.clientWidth;
         const btnHeight = noBtn.clientHeight;
-
         const newX = Math.random() * (containerWidth - btnWidth);
         const newY = Math.random() * (containerHeight - btnHeight);
-
         noBtn.style.left = newX + 'px';
         noBtn.style.top = newY + 'px';
         noBtn.style.right = 'auto';
@@ -100,31 +97,54 @@ funny_app_html = f"""
     noBtn.addEventListener('mouseover', glide);
     noBtn.addEventListener('touchstart', (e) => {{ e.preventDefault(); glide(); }});
 
+    // ОБНОВЕН ЕКРАН "БРАВО"
     yesBtn.addEventListener('click', () => {{
         document.body.innerHTML = `
             <div style="
                 display: flex; 
-                flex-direction: column; 
                 align-items: center; 
                 justify-content: center; 
                 height: 100vh; 
-                background-color: #2ecc71; 
-                color: white;
-                text-align: center;
-                font-family: sans-serif;">
+                background-color: white; 
+                font-family: sans-serif;
+                padding: 20px;">
                 
-                <h1 style="font-size: 60px; text-shadow: 4px 4px 0px black; margin-bottom: 10px;">БРАВО!</h1>
-                <h2 style="background: white; color: black; padding: 15px 30px; border: 5px solid black; border-radius: 20px; font-weight: 800;">
-                    ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
-                </h2>
-                
-                <img src="{YOUR_IMAGE_URL}" style="
-                    margin-top: 25px;
-                    width: 350px; 
-                    height: auto;
-                    border-radius: 30px; 
-                    border: 6px solid black;
-                    box-shadow: 15px 15px 0px rgba(0,0,0,0.2);">
+                <!-- ЗЕЛЕНАТА КАРТА СЪС ЗАОБЛЕНИ ЪГЛИ И РАМКА -->
+                <div style="
+                    background-color: #2ecc71; 
+                    border: 6px solid black; 
+                    border-radius: 40px; 
+                    padding: 40px; 
+                    display: flex; 
+                    flex-direction: column; 
+                    align-items: center; 
+                    box-shadow: 15px 15px 0px rgba(0,0,0,0.1);
+                    max-width: 500px;
+                    width: 90%;">
+                    
+                    <h1 style="font-size: 55px; color: white; text-shadow: 4px 4px 0px black; margin: 0;">БРАВО!</h1>
+                    
+                    <h2 style="
+                        background: white; 
+                        color: black; 
+                        padding: 15px 30px; 
+                        border: 4px solid black; 
+                        border-radius: 20px; 
+                        margin: 25px 0; 
+                        font-weight: 800;
+                        font-size: 22px;">
+                        ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
+                    </h2>
+                    
+                    <img src="{YOUR_IMAGE_URL}" style="
+                        width: 100%; 
+                        max-width: 320px;
+                        height: auto;
+                        border-radius: 25px; 
+                        border: 5px solid black;
+                        background-color: white;
+                        object-fit: contain;">
+                </div>
             </div>
         `;
     }});
