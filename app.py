@@ -17,7 +17,7 @@ YOUR_IMAGE_URL = "https://img.freepik.com/free-vector/smiley-face-thumbs-up_1308
 funny_app_html = f"""
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', sans-serif;">
 
-    <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: white; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,1);">
+    <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: white; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.25);">
         <h2 style="margin: 0; color: black; font-weight: 500; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
     </div>
 
