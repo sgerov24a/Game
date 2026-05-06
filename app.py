@@ -89,7 +89,7 @@ funny_app_html = f"""
                     <h2 style="background: white; color: black; padding: 15px 30px; border: 4px solid black; border-radius: 20px; margin: 25px 0; font-weight: 800; font-size: 22px;">
                         ЗНАЕХ, ЧЕ ЩЕ СЕ СЪГЛАСИШ!
                     </h2>
-                    <img src="{YOUR_IMAGE_URL}" style="width: 100%; max-width: 320px; height: auto; border-radius: 25px; border: 5px solid black; background-color: white; object-fit: contain;">
+                    <img src="{YOUR_IMAGE_URL}" style="width: 100%; max-width: 320px; height: auto; border-radius: 25px; border: 5px solid black; background-color: #ffc2d4; object-fit: contain;">
                 </div>
             </div>
         `;
