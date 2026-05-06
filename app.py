@@ -29,7 +29,7 @@ funny_app_html = f"""
         box-shadow: 15px 15px 0px rgba(0,0,0,0.25); 
         max-width: 750px; 
         width: 95%; 
-        background-color: blue;">
+        background-color: #eb6a90;">
 
         <!-- ВЪПРОСЪТ -->
         <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: white; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.1);">
