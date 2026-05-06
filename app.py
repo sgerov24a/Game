@@ -38,7 +38,7 @@ funny_app_html = f"""
 
         <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
         <div id="mainContainer" style="width: 100%; max-width: 650px; height: 450px; background-color: white; border: 8px solid black; border-radius: 25px; position: relative; overflow: hidden;">
-            <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #fc0303; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
+            <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
                 Да
             </button>
 
