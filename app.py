@@ -14,7 +14,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # РАБОТЕЩ ЛИНК (Можеш да го замениш с твоя Raw линк от GitHub по-късно)
-YOUR_IMAGE_URL = "https://img.freepik.com/free-vector/smiley-face-thumbs-up_1308-45605.jpg"
+YOUR_IMAGE_URL = "https://github.com/sgerov24a/Game/blob/main/Screenshot%202026-05-05%20230606.png?raw=true"
 
 funny_app_html = f"""
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
