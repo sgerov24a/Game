@@ -12,23 +12,40 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# Твоят линк към снимката
 YOUR_IMAGE_URL = "https://github.com/sgerov24a/Game/blob/main/Screenshot%202026-05-05%20230606.png?raw=true"
 
 funny_app_html = f"""
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', sans-serif;">
+<div style="display: flex; align-items: center; justify-content: center; height: 95vh; background-color: white; font-family: 'Segoe UI', sans-serif;">
 
-    <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: white; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.25);">
-        <h2 style="margin: 0; color: black; font-weight: 500; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
-    </div>
+    <!-- ОБЩИЯТ КОНТЕЙНЕР С ГРАНИЦА (Като на Браво екрана) -->
+    <div style="
+        border: 6px solid black; 
+        border-radius: 40px; 
+        padding: 40px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        box-shadow: 15px 15px 0px rgba(0,0,0,0.1); 
+        max-width: 750px; 
+        width: 95%; 
+        background-color: white;">
 
-    <div id="mainContainer" style="width: 95%; max-width: 650px; height: 450px; background-color: white; border: 8px solid black; border-radius: 25px; position: relative; overflow: hidden;">
-        <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
-            Да
-        </button>
+        <!-- ВЪПРОСЪТ -->
+        <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: white; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.1);">
+            <h2 style="margin: 0; color: black; font-weight: 500; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
+        </div>
 
-        <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;">
-            Не
-        </button>
+        <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
+        <div id="mainContainer" style="width: 100%; max-width: 650px; height: 450px; background-color: white; border: 8px solid black; border-radius: 25px; position: relative; overflow: hidden;">
+            <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
+                Да
+            </button>
+
+            <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;">
+                Не
+            </button>
+        </div>
     </div>
 </div>
 
@@ -43,7 +60,6 @@ funny_app_html = f"""
         const btnWidth = noBtn.clientWidth;
         const btnHeight = noBtn.clientHeight;
 
-        // Вземаме текущата позиция
         const rect = noBtn.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
         const currX = rect.left - containerRect.left;
@@ -51,7 +67,6 @@ funny_app_html = f"""
 
         let newX, newY;
         
-        // Генерираме нова позиция, докато не е на поне 150px от старата
         do {{
             newX = Math.random() * (containerWidth - btnWidth);
             newY = Math.random() * (containerHeight - btnHeight);
@@ -62,11 +77,8 @@ funny_app_html = f"""
         noBtn.style.right = 'auto';
     }}
 
-    // КЛЮЧОВАТА ПРОМЯНА: mousemove вместо mouseover
     noBtn.addEventListener('mousemove', glide);
     noBtn.addEventListener('touchstart', (e) => {{ e.preventDefault(); glide(); }}, {{passive: false}});
-    
-    // Допълнителна защита: ако все пак успеят да кликнат (хардуерен бъг), бутонът пак бяга
     noBtn.addEventListener('click', (e) => {{ e.preventDefault(); glide(); }});
 
     yesBtn.addEventListener('click', () => {{
