@@ -23,7 +23,7 @@ funny_app_html = f"""
 
     <div id="mainContainer" style="width: 95%; max-width: 650px; height: 450px; background-color: white; border: 4px solid black; border-radius: 25px; position: relative; overflow: hidden;">
         <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
-            Може
+            Да
         </button>
 
         <button id="noBtn" style="position: absolute; top: 180px; right: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #e74c3c; color: white; border: 4px solid black; border-radius: 15px; z-index: 10; transition: all 0.3s ease-out; touch-action: none; cursor: default;">
