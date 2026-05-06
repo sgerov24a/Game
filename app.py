@@ -20,13 +20,13 @@ funny_app_html = f"""
 
     <!-- ОБЩИЯТ КОНТЕЙНЕР С ГРАНИЦА (Като на Браво екрана) -->
     <div style="
-        border: 6px solid black; 
+        border: 10px solid black; 
         border-radius: 40px; 
         padding: 40px; 
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        box-shadow: 15px 15px 0px rgba(0,0,0,0.1); 
+        box-shadow: 15px 15px 0px rgba(0,0,0,0.25); 
         max-width: 750px; 
         width: 95%; 
         background-color: white;">
