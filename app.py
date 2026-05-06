@@ -21,7 +21,7 @@ funny_app_html = f"""
         <h2 style="margin: 0; color: black; font-weight: 500; font-size: 28px;">Ще ми дадеш ли отличен (6) на проекта?</h2>
     </div>
 
-    <div id="mainContainer" style="width: 95%; max-width: 650px; height: 450px; background-color: white; border: 10px solid black; border-radius: 25px; position: relative; overflow: hidden;">
+    <div id="mainContainer" style="width: 95%; max-width: 650px; height: 450px; background-color: white; border: 8px solid black; border-radius: 25px; position: relative; overflow: hidden;">
         <button id="yesBtn" style="position: absolute; top: 180px; left: 15%; padding: 18px 40px; font-size: 22px; font-weight: bold; background-color: #2ecc71; color: white; border: 4px solid black; border-radius: 15px; cursor: pointer; z-index: 10;">
             Да
         </button>
