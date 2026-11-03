@@ -33,7 +33,7 @@ funny_app_html = f"""
 
         <!-- ВЪПРОСЪТ -->
         <div style="border: 8px solid black; border-radius: 20px; padding: 25px 50px; background-color: #FFC2D4; margin-bottom: 25px; text-align: center; box-shadow: 8px 8px 0px rgba(0,0,0,0.25);">
-            <h2 style="margin: 0; font-family: 'Pacifico', cursive; color: black; font-weight: 400; font-size: 28px;">25252525252525252525</h2>
+            <h2 style="margin: 0; font-family: 'Pacifico', cursive; color: black; font-weight: 400; font-size: 28px;">Ще ми пишете ли 6?</h2>
         </div>
 
         <!-- БЯЛОТО ПОЛЕ (ЗОНА ЗА ИГРА) -->
