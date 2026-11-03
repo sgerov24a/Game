@@ -83,7 +83,7 @@ funny_app_html = f"""
 
     yesBtn.addEventListener('click', () => {{
         document.body.innerHTML = `
-            <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #007D9A; font-family: sans-serif; padding: 20px;">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #FFC2D4; font-family: sans-serif; padding: 20px;">
                 <div style="background-color: #EB6A90; border: 10px solid black; border-radius: 40px; padding: 40px; display: flex; flex-direction: column; align-items: center; box-shadow: 15px 15px 0px rgba(0,0,0,0.25); max-width: 500px; width: 90%;">
                     <h1 style="font-size: 55px; color: white; text-shadow: 4px 4px 0px black; margin: 0;">БРАВО!</h1>
                     <h2 style="background: #ffc2d4; color: black; padding: 15px 30px; border: 8px solid black; border-radius: 20px; margin: 25px 0; font-weight: 800; font-size: 22px;box-shadow: 8px 8px 0px rgba(0,0,0,0.25)">
